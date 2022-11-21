@@ -6,29 +6,26 @@ body{
 html{
     font-family: sans-serif;
 }
-.sticky {
+.header{
     position: fixed;
     top: 0;
-    width: 100%;
-  }
-  .sticky + .wrapper{
-    padding-top: 130px;
-  }
-
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
 .navbar{
-    margin: -1px;
+    margin: -1px ;
     border: 1px solid #ccc;
     height: 100px;
     width: 100%;
-    padding: 8px 16px;
- 
+    padding: 8px 25px;
     background-color: #151618;
     display: flex;
     justify-content: space-between;
 
 }
 .wrapper{
-    margin: 0  auto;
+    margin: 153px  auto;
     height: 700px;
     width: 90%;
 
@@ -50,8 +47,8 @@ html{
 .navbar_collapse{
     display: flex;
     align-items: center;
-    margin-right: 25px;
-    margin-left: -25px;
+    margin-right: 60px;
+    margin-left: 40px;
 }
 .navbar_nav{
     display: flex;
@@ -75,12 +72,24 @@ html{
     font-size: 25Px;
     margin-right: 5Px;
 }
-.form-control{
-    padding:10px;
+.search_container input{
+    padding: 10px 0;
+    margin-top: 3px;
     float: left;
-    
+    border: none;
+    outline: none;
+}
+.btn_search{
+    padding: 3px;
+    text-align: center;
+ 
+}
+.search_container{
+    display: flex;
+    align-items: center;
 }
 .btn{
+    margin-right: 3px;
     padding: 10px;
     border: 1px solid none;
     border-radius: 5Px;
@@ -89,15 +98,18 @@ html{
     font-weight: bold;
     font-size: 15Px;
     transition: all 0.2s linear;
-
+    text-decoration: none;
 }
-.btnlogin{
-    padding: 11px;
-    border: none;
+
+.btn i{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn a{
+    text-decoration: none;
     background-color: #edd08b;
     color: #151618c4;
-    font-weight: 600;
-    text-decoration: none;
 }
 .btn-outline-success:hover{
     background-color: #edcf8bbe;
@@ -111,7 +123,6 @@ html{
 }
 .slidebar{
     border-right: 1px solid #ccc;
-   
     height: 390px;
     width: 20%;
     margin: 5px 0 0 5px;
@@ -152,7 +163,6 @@ html{
     height: 5px;
     width: 0px;
     background-color: #151618;
-
     position: absolute;
     bottom: 0;
     left: 0;
@@ -161,19 +171,34 @@ html{
 .slidebar_item a:hover::after{
     width: 50%;
     transform: translateX(100%);
+   
     
 }
 
 
 
 .maincontent{
-
     height: auto;
     width: 79%;
     height: 100%;
     margin: 5px 0 50px 5px;
     float: left;
-   
+}
+.maincontent span{
+    content: "\27A4";
+    padding-right: 2px;
+    font-size: 15px;
+    
+
+}
+.maincontent h3{
+    margin: 0;
+    padding: 10px 0 10px 40px;
+    width: 100%;
+    background-color: #151618;
+    color: #edd08b;
+    border: 3px solid #151618;
+    border-radius: 15px;
 }
 .cart_product{
     padding: 0;
@@ -272,10 +297,10 @@ html{
 .footer_copyright_bottom{
     display: flex;
 }
-.footer_group{
+/* .footer_group{
    
     margin: 0 50px 0 50px;
-}
+} */
 .footer_list, .footer_list_icon{
     list-style: none;
     display: inline-block;
@@ -288,7 +313,7 @@ html{
     font-size: 20px;
 }
 .footer_title{
-    font-size: 15px;
+    font-size: 18px;
 }
 .footer_item{
     padding: 5px;
@@ -320,8 +345,9 @@ footer_copyright_social{
     width: 180px;
     height: 100px;
 }
-.footer_rule{
-    display: flex;
+.footer_rules{
+    display: inline;
+    padding-right: 20px;
 }
 
 
