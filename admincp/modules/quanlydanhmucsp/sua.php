@@ -2,7 +2,7 @@
     $sql_sua_danhmucsp = "SELECT * FROM tb_danhmuc WHERE id_danhmuc ='$_GET[iddanhmuc]' LIMIT 1";
     $query_sua_danhmucsp =   mysqli_query($mysqli,$sql_sua_danhmucsp);
 ?>
-
+<div class="product_form">
 <form class="product_portfolio" method="POST" action="modules/quanlydanhmucsp/xuly.php?iddanhmuc=<?php echo $_GET['iddanhmuc']?>">
 
         <h3 class="heading_product_portfolio">Sửa danh mục sản phẩm</h3>
@@ -23,3 +23,4 @@
         } 
         ?>
 </form>
+</div>

@@ -1,5 +1,5 @@
-    
-     <div class="footer"> 
+
+    <div class="footer posi"> 
         <div class="footer_container">
             <div class="footer_content">
                 <div class="footer_content_top">

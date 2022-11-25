@@ -10,11 +10,13 @@
     <title>DASHOP</title>
 </head>
 <body>   
+  <div class="wrapper">
     <?php 
       include("./pages/header.php");
       include("./pages/main.php");
       include("./pages/footer.php");
     ?>
+    </div>
    <!-- <script src="./js/rollheader.js"></script> -->
 </body>
 </html>

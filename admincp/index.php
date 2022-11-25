@@ -10,21 +10,17 @@
     <title>AdminPage</title>
 </head>
 <body>
-    <h3>Welcome to Admin</h3>
     <?php 
       include("config/config.php");
     ?>
-    <?php 
-     include("modules/header.php");
-    ?>
-      <div class="wrapper">
+  
+    <div class="wrapper">
       <?php 
-            
+            include("modules/header.php");
             include("modules/main.php");
+            // include("modules/footer.php");
       ?>
     </div>
-    <?php 
-      include("modules/footer.php");
-    ?>
+   
 </body>
 </html>

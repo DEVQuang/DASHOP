@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper"> -->
     <div id="main">
         <?php
             include("slidebar/slidebar.php")
@@ -23,4 +23,4 @@
         </div>
     </div>
     <div class="clear"></div>
-</div>
+<!-- </div> -->
