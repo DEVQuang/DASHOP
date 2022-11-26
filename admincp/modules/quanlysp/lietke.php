@@ -1,5 +1,5 @@
 <?php 
-    $sql_lietke_sp = "SELECT * FROM tb_sanpham ORDER BY id_sanpham DESC";
+    $sql_lietke_sp = "SELECT * FROM tb_sanpham,tb_danhmuc WHERE tb_sanpham.id_danhmuc = tb_danhmuc.id_danhmuc ORDER BY id_sanpham DESC";
     $query_lietke_sp =   mysqli_query($mysqli,$sql_lietke_sp);
 ?>
 <div class="product_form">
@@ -12,8 +12,10 @@
     <th>Giá</th>
     <th>Số Lượng</th>
     <th>Tóm tắt</th>
+    <th>Danh Mục</th>
     <th>Tình Trạng</th>
-    <th>Hình </th>
+    <th>Hình ảnh </th>
+    <th></th>
   </tr>
 
 
@@ -28,10 +30,13 @@
     <td><?php echo $row['masanpham'] ?></td>
     <td><?php echo $row['tensanpham'] ?></td>
     <td><?php echo $row['Gia'] ?></td>
-    <td><?php echo $row['soluong'] ?></td>
+    <td><?php echo $row['soluong']?></td>
     <td><?php echo $row['tomtat'] ?></td>
+    <td><?php echo $row['tendanhmuc'] ?></td>
+
+
     <td>
-      <?php 
+      <?php  
       if($row['tinhtrang']==1){
         echo 'Kích Hoạt';
       }else{

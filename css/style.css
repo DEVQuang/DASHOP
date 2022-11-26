@@ -77,6 +77,30 @@ html{
 .nav_item:hover::after{
     width: 100%;
 }
+.nav_item:hover .nav_item_product_list{
+    display: block;
+}
+.nav_item_product_list{
+    display: inline;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #151618;
+    display: none;
+    width: 300px;
+}
+
+.nav_item_product_list li{
+    padding: 20px 10px ;
+    margin: 5px 2px;
+}
+.nav_item_product_list a{
+    display: block;
+}
+
+
 .nav_item i {  
     font-weight: bold;
     font-size: 25px; 

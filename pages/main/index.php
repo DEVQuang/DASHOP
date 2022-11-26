@@ -9,7 +9,7 @@
         <p class="product_price">39.990.000đ</p>
         <button class="product_btn--add">Thêm vào giỏ hàng</button>
     </li>
-    <li>
+    <!-- <li>
         <a href="#" class="product_link">
             <img src="./img/tainghe2.jpg" alt="">
             <h1 class="product_heading">Tai Nghe Sony 119</h1>
@@ -89,6 +89,6 @@
         </a>
         <p class="product_price">39.990.000đ</p>
         <button class="product_btn--add">Thêm vào giỏ hàng</button>
-    </li>
+    </li> -->
 
 </ul>

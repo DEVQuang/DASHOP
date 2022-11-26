@@ -1,3 +1,8 @@
+<?php 
+      $sql_danhmuc = "SELECT * FROM tb_danhmuc ORDER BY id_danhmuc DESC ";
+      $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
+?>
+
 <div class="header">
     <div class="navbar" id="Header"> 
         <div class="navbar_collapse">
@@ -6,7 +11,18 @@
             <ul class="navbar_nav">
                 
                 <li class="nav_item"><a href="index.php" class="nav_link">Trang chủ</a></li>
-                <li class="nav_item product"><a href="index.php?quanly=sanpham&id=1" class="nav_link">Sản phẩm</a></li>
+                <li class="nav_item product"><a href="index.php" class="nav_link">Sản phẩm</a>
+                    <ul class="nav_item_product_list">
+                        <?php 
+                          while($row_danhmuc = mysqli_fetch_array($query_danhmuc)){
+                        ?>
+                        <li class="nav_item"><a href="index.php?quanly=sanpham&id=<?php echo $row_danhmuc['id_danhmuc']?>"><?php echo $row_danhmuc['tendanhmuc']?></a></li>
+                        <?php
+                          }
+                        ?>
+                    </ul>
+                </li>
+
                 <li class="nav_item introduce"><a href="index.php?quanly=gioithieu" class="nav_link">Giới thiệu về DASHOP</a></li>
             </ul>
         </div>

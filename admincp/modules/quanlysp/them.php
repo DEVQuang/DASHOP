@@ -27,6 +27,21 @@
         <textarea style="resize: none;" name="tomtatsp" id="" cols="10" rows="10" class="product_portfolio_textarea"></textarea>
         </div>
         <div class="txt_filed">
+        <lable class="lable_product_portfolio">Danh Mục Sản Phẩm </lable>
+            <select name="danhmucsp" id="" class="select_product">
+               <?php 
+               $sql_danhmuc = "SELECT * FROM tb_danhmuc ORDER BY id_danhmuc DESC ";
+               $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
+               while($row_danhmuc = mysqli_fetch_array($query_danhmuc)){
+
+               ?>
+                <option value="<?php echo $row_danhmuc['id_danhmuc']?>" class="product_status"><?php echo $row_danhmuc['tendanhmuc']?></option>
+               <?php 
+               }
+                ?>
+            </select>
+        </div>
+        <div class="txt_filed">
         <lable class="lable_product_portfolio">Tình trạng </lable>
             <select name="tinhtrangsp" id="" class="select_product">
                 <option value="1" class="product_status">Kích hoạt</option>

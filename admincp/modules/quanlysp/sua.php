@@ -33,6 +33,27 @@
         <textarea style="resize: none;" name="tomtatsp" id="" cols="10" rows="10" class="product_portfolio_textarea" value="<?php echo $row['tomtat'] ?>"></textarea>
         </div>
         <div class="txt_filed">
+        <lable class="lable_product_portfolio">Danh Mục Sản Phẩm </lable>
+            <select name="danhmucsp" id="" class="select_product">
+            <?php 
+               $sql_danhmuc = "SELECT * FROM tb_danhmuc ORDER BY id_danhmuc DESC ";
+               $query_danhmuc = mysqli_query($mysqli,$sql_danhmuc);
+               while($row_danhmuc = mysqli_fetch_array($query_danhmuc)){
+                if($row_danhmuc['id_danhmuc']==$row['id_danhmuc']){
+            ?>
+                <option selected value="<?php echo $row_danhmuc['id_danhmuc']?>" class="product_status"><?php echo $row_danhmuc['tendanhmuc']?></option>
+            <?php 
+                }else{
+            ?>
+             <option value="<?php echo $row_danhmuc['id_danhmuc']?>" class="product_status"><?php echo $row_danhmuc['tendanhmuc']?></option>
+            <?php     
+                }
+               }
+            ?>     
+
+            </select>
+        </div>
+        <div class="txt_filed">
         <lable class="lable_product_portfolio">Tình trạng </lable>
             <select name="tinhtrangsp" id="" class="select_product">
                 <?php
@@ -54,12 +75,14 @@
         </div>
         <div class="txt_filed">
         <lable class="lable_product_portfolio">Hình Ảnh </lable>
+        <div class="txt_file_btn_img">
         <input class="product_portfolio_input" name="hinhanhsp" type="file">
         <img src="modules/quanlysp/uploads/<?php echo $row['hinhanh'] ?>" width="100px">
+        </div>
         <br>
         </div>
        <div class="txt_filed"></div>
-        <input class="product_portfolio_submit"type="submit" value="Sửa Sản Phẩm" name="themsp">
+        <input class="product_portfolio_submit"type="submit" value="Sửa Sản Phẩm" name="suasanpham">
     </form>
 </div>
 <?php

@@ -128,7 +128,13 @@ form .txt_filed{
     position: relative;
     left: 30%;
 }
+.txt_file_btn_img{
+    display: flex;
+}
+.txt_file_btn_img img{
+    margin-right: 60%;
 
+}
 
 
 
